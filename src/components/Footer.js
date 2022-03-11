@@ -8,11 +8,11 @@ import Typography from '@mui/material/Typography';
 
 const Footer = () => {
     return(
-        <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+        <Box sx={{ flexGrow: 1}}>
+      <AppBar position="static" sx={{ alignItems: "center", bgcolor: "#001529"}}>
         <Toolbar>
           
-        <Typography variant="h8" sx={{ flexGrow: 1 }}>
+        <Typography variant="h9">
             Creado por Zuri 
         </Typography>
          
