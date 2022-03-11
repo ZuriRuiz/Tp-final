@@ -8,15 +8,19 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="ultimoslanzamientos" element={<UltimosL />} />
-        <Route path="populares" element={<Populares />} />
-        <Route path="buscar" element={<Buscar />} />
-      </Routes>
-    </BrowserRouter>
+    <div>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="ultimoslanzamientos" element={<UltimosL />} />
+          <Route path="populares" element={<Populares />} />
+          <Route path="buscar" element={<Buscar />} />
+        </Routes>
+      </BrowserRouter>
+      <Footer />
+    </div>
+    
   );
 };
 export default App;
