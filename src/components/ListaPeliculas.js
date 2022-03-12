@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react"
+import PeliculaItem from "./PeliculaItem";
+import Box from "@mui/material/Box";
+import Typography from '@mui/material/Typography';
 
 
 
@@ -13,8 +16,23 @@ const ListaPeliculas = ({titulo, url}) => {
 
     return(
         <div>
-            <h2>{titulo}</h2>
-            {peliculas.map(pelicula => <p key={pelicula.id}>{pelicula.title}</p>)}
+            <Box sx={{ bgcolor: "#001529", color: "#ffffff", textAlign: 'center', fontWeight: 'medium' }}>
+                <Typography sx={{}}>{titulo}</Typography>
+            </Box>
+            
+            
+                {peliculas.map(pelicula => (
+                <PeliculaItem
+                titulo={pelicula.title}
+                imagen={`https://image.tmdb.org/t/p/w300${pelicula.poster_path}`}
+                link={`/${pelicula.id}`}
+                />
+
+            ))}
+            
+           
+            
+            
         </div>
     )
 }
