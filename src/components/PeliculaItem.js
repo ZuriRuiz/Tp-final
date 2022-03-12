@@ -6,13 +6,13 @@ import { Link } from "react-router-dom";
 
 const PeliculaItem = ({ titulo, imagen, Link }) => {
     return (
-        <Box sx= {{ m: 2 }}>
+        <Box sx={{ display: "flex",  justifyContent: "space-between", mt: 1, border: 1, p: 3, borderColor: 'grey.500' }}>
             
             <Avatar src={imagen} />
             
-            <Typography>{titulo}</Typography>
+            <Typography sx={{ pl: 1, pt: 1, }}>{titulo}</Typography>
             
-            <ArrowForwardIosIcon />
+            <ArrowForwardIosIcon sx={{ width: 30, pt: 1, bgcolor: "#007efd", color: "white", borderRadius: "50%" }} />
             
         </Box>
     )
