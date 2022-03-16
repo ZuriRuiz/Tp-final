@@ -1,11 +1,15 @@
 import ListaPeliculas from "./ListaPeliculas";
 import * as React from "react";
+import Carrusel from "./Carrusel";
 import Box from "@mui/material/Box";
+
 
 const Home = () => {
   return (
     
+   
     <div>
+      <Carrusel />
       <Box
         sx={{
           display: 'flex',
