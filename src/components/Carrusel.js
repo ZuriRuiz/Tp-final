@@ -1,8 +1,7 @@
 import React from "react";
-import Box from "@mui/material/Box";
 import Carousel from "react-material-ui-carousel";
+import Container from "@mui/material/Container";
 import CarruselItem from "./CarruselItem";
-import { Paper, Button } from "@mui/material";
 import { useEffect, useState } from "react";
 
 const Carrusel = () => {
@@ -16,23 +15,18 @@ const Carrusel = () => {
   }, []);
 
   return (
-    <Carousel animation="slide" duration="800">
-      
-        <Box sx ={{}}>
-
-            {peliculas.map((pelicula) => (
-                <CarruselItem
-                    key={pelicula.id}
-                    titulo={pelicula.title}
-                    imagen={`https://image.tmdb.org/t/p/original/${pelicula.poster_path}`}
-                    descripcion={pelicula.overview}
-                />
-            ))}
-        
-        </Box>
-        
-      
-    </Carousel>
+    <Container sx={{ bgcolor: "gray", height: '75%', mt: 6, pt: 1 }}>
+      <Carousel animation="slide" duration="700">
+        {peliculas.map((pelicula) => (
+          <CarruselItem
+            key={pelicula.id}
+            titulo={pelicula.title}
+            imagen={`https://image.tmdb.org/t/p/w300/${pelicula.poster_path}`}
+            descripcion={pelicula.overview}
+          />
+        ))}
+      </Carousel>
+    </Container>
   );
 };
 
