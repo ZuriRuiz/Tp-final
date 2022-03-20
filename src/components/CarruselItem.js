@@ -5,23 +5,19 @@ import Box from "@mui/material/Box";
 
 const CarruselItem = ({ titulo, imagen, descripcion }) => {
   return (
-    <Container>
-      <Box>
-        <Typography variant="h5" sx={{}}>
-          {titulo}
-        </Typography>
+    
+      <div>
+        <Typography>{titulo}</Typography>
         <Typography>{descripcion}</Typography>
 
-        <Container sx={{ display: "flex", alignContent: "center" }}>
-          <img src={imagen} />
-        </Container>
-      </Box>
-      <Box sx={{ display: "flex", flexDirection: "column", width: "10%" }}>
+        <img src={imagen} />
+      
+      
         <Button variant="contained" size="small">
           Ver mas...
         </Button>
-      </Box>
-    </Container>
+      </div>
+    
   );
 };
 
