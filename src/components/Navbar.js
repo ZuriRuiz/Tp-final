@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar sx={{ bgcolor: "#001529" }} position="static">
+      <AppBar sx={{ bgcolor: "#001529" }} >
         <Toolbar>
           <MovieCreationIcon />
           <Typography

@@ -1,17 +1,24 @@
-import { Paper, Button } from "@mui/material";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
 
 const CarruselItem = ({ titulo, imagen, descripcion }) => {
-    return (
+  return (
+    
+      <div>
+        <Typography>{titulo}</Typography>
+        <Typography>{descripcion}</Typography>
 
-        <Paper
-
-        >
-            <h2>{titulo}</h2>
-            <p>{descripcion}</p>
-            <img src={imagen}/>
-            <Button>Ver mas...</Button>
-        </Paper>
-    )
-}
+        <img src={imagen} />
+      
+      
+        <Button variant="contained" size="small">
+          Ver mas...
+        </Button>
+      </div>
+    
+  );
+};
 
 export default CarruselItem;
