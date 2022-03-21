@@ -16,7 +16,7 @@ const ListaPeliculas = ({titulo, url}) => {
 
     return(
         <div>
-            <Box sx={{ bgcolor: "#001529", color: "#ffffff", textAlign: 'center', fontWeight: 'medium' }}>
+            <Box sx={{ bgcolor: "#001529", color: "#ffffff", textAlign: 'center' }}>
                 <Typography>{titulo}</Typography>
             </Box>
             
