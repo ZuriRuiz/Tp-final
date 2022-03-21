@@ -1,10 +1,7 @@
 import React from "react";
+import Carousel from "react-material-ui-carousel";
 import CarruselItem from "./CarruselItem";
 import { useEffect, useState } from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Container from "@mui/material/Container";
 
 const Carrusel = () => {
   const [peliculas, setPeliculas] = useState([]);
@@ -17,25 +14,16 @@ const Carrusel = () => {
   }, []);
 
   return (
-    <Container sx={{ mt: 15, textContent: "center", border: 1, p: "auto"}}>
-      <Slider
-        dots={true}
-        arrows={true}
-        slidesToShow={1}
-        autoplay={true}
-        autoplaySpeed={2500}
-        adaptiveHeight={true}
-      >
-        {peliculas.map((pelicula) => (
-          <CarruselItem
-            key={pelicula.id}
-            titulo={pelicula.title}
-            imagen={`https://image.tmdb.org/t/p/w300/${pelicula.poster_path}`}
-            descripcion={pelicula.overview}
-          />
-        ))}
-      </Slider>
-    </Container>
+    <Carousel animation="slide" duration="800">
+      {peliculas.map((pelicula) => (
+        <CarruselItem
+          key={pelicula.id}
+          titulo={pelicula.title}
+          imagen={`https://image.tmdb.org/t/p/original/${pelicula.poster_path}`}
+          descripcion={pelicula.overview}
+        />
+      ))}
+    </Carousel>
   );
 };
 

@@ -1,22 +1,25 @@
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
-import Box from "@mui/material/Box";
+import { Box, Button, Typography } from "@mui/material";
 
 const CarruselItem = ({ titulo, imagen, descripcion }) => {
   return (
+    <Box
+    sx={{
+      backgroundImage: `url(${imagen})`, // el div tiene como fondo nuestra imagen
+      backgroundPosition: 'center', //la imagen esta centrada
+      backgroundRepeat: 'no-repeat', // la imagen no se repite
+      backgroundSize: 'cover',
+      width: "100%", // ocupa todo el div
+      mt: 10,
+      width: '100%',
+      height: '100%'
     
-      <div>
-        <Typography>{titulo}</Typography>
-        <Typography>{descripcion}</Typography>
+    }}
+  >
+    <Typography>{titulo}</Typography>
+    <Typography sx= {{ display: "flex", flexDirection: "column" }}>{descripcion}</Typography>
 
-        <img src={imagen} />
-      
-      
-        <Button variant="contained" size="small">
-          Ver mas...
-        </Button>
-      </div>
+    <Button>Ver mas...</Button>
+  </Box>
     
   );
 };
