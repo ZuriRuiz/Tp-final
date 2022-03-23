@@ -1,13 +1,19 @@
 import useFetchPeliculas from "../Hooks/useFetchPeliculas";
-const UltimosL = () => {
+import CardPopularesUltimosL from "./CardPopularesUltimosL";
+
+const UltimosL = ({titulo, imagen, link}) => {
     
     const peliculas = useFetchPeliculas("upcoming")
     
     return (
         <div>
-        <h2>Ultimos Lanzamientos</h2>
         {peliculas.map(pelicula => (
-            <h3 key={pelicula.id}>{pelicula.title}</h3>
+            <CardPopularesUltimosL
+            titulo={pelicula.title}
+            imagen={`https://image.tmdb.org/t/p/w300${pelicula.poster_path}`}
+            link={`/${pelicula.id}`}
+            />
+
         ))}
         </div>
     )   
