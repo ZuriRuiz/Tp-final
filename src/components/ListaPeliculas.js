@@ -15,7 +15,7 @@ const ListaPeliculas = ({titulo, url}) => {
     }, [])
 
     return(
-        <div>
+        <div style= {{height: "450px", overflowY: "scroll" }}>
             <Box sx={{ bgcolor: "#001529", color: "#ffffff", textAlign: 'center' }}>
                 <Typography>{titulo}</Typography>
             </Box>
