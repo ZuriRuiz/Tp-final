@@ -1,5 +1,6 @@
 import Typography from '@mui/material/Typography';
 
+
 const CardPopularesUltimosL = ({titulo, imagen, link}) => {
     return (
         <div>
