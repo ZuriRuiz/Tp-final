@@ -6,6 +6,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import CardActions from "@mui/material/CardActions";
 import IconButton from "@mui/material/IconButton";
 
+
 const CardPopularesUltimosL = ({ titulo, imagen, link }) => {
   return (
     

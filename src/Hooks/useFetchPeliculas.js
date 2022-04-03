@@ -13,7 +13,7 @@ const useFetchPeliculas = (categoria, page) => {
         .then(data => {
             setPeliculas(data.results);
             setTotalPages(data.total_pages)
-            console.log(data.total_pages)
+            
           });
         
     }, [page])
