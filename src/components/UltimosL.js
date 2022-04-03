@@ -1,31 +1,54 @@
 import useFetchPeliculas from "../Hooks/useFetchPeliculas";
 import CardPopularesUltimosL from "./CardPopularesUltimosL";
-import { useState } from "react";
 import usePaginado from "../Hooks/usePaginado";
 import Paginado from "./Paginado";
+import Box from "@mui/material/Box";
+
+
 
 const UltimosL = ({ titulo, imagen, link }) => {
+  
+  const { page, handleClickNext, handleClickPrev } = usePaginado()
   const { peliculas, totalPages } = useFetchPeliculas("upcoming", page);
-  const { page,  handleClickNext, handleClickPrev } = usePaginado();
+  
 
-  console.log(totalPages);
+  
   return (
-    <div>
-      {peliculas.map((pelicula) => (
-        <CardPopularesUltimosL
-          titulo={pelicula.title}
-          imagen={`https://image.tmdb.org/t/p/w300${pelicula.poster_path}`}
-          link={`/${pelicula.id}`}
-        />
-      ))}
-
+    <Box
+      sx={{
+        marginTop: 5,
+        display: "flex",
+        flexWrap: "wrap",
+        flexDirection: "column",
+        justifyContent: "center",
+      }}
+    >
+      <Box
+        sx={{
+          marginTop: 5,
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
+        }}
+      >
+        {peliculas.map((pelicula) => (
+          <CardPopularesUltimosL
+            key={pelicula.id}
+            titulo={pelicula.title}
+            imagen={`https://image.tmdb.org/t/p/w200/${pelicula.poster_path}`}
+            link={`/detalle-pelicula/${pelicula.id}`}
+          />
+        ))}
+      </Box>
+            
       <Paginado
         handleClickPrev={handleClickPrev}
         handleClickNext={handleClickNext}
         page={page}
         totalPages={totalPages}
       />
-    </div>
+    </Box>
+    
   );
 };
 

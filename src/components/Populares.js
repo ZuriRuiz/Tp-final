@@ -1,24 +1,15 @@
 import useFetchPeliculas from "../Hooks/useFetchPeliculas";
-import { useState } from "react";
+import usePaginado from "../Hooks/usePaginado"
 import CardPopularesUltimosL from "./CardPopularesUltimosL";
 import Box from "@mui/material/Box";
 import Paginado from "./Paginado";
 
 
 const Populares = ({ titulo, imagen, link }) => {
-  const [page, setPage] = useState(1);
+  const { page, handleClickNext, handleClickPrev } = usePaginado()
   const { peliculas, totalPages } = useFetchPeliculas("popular", page);
 
-  console.log(page);
-
-  const handleClickNext = () => {
-    setPage(page + 1);
-  };
-
-  const handleClickPrev = () => {
-    setPage(page - 1);
-  };
-
+  
   return (
     <Box
       sx={{
