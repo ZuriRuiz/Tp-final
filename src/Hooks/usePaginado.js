@@ -10,6 +10,7 @@ const usePaginado = () => {
         setPage(page + 1);
       };
     
+
       const handleClickPrev = () => {
         setPage(page - 1);
       };
@@ -17,7 +18,8 @@ const usePaginado = () => {
     return ({
         page: page,
         handleClickNext: handleClickNext,
-        handleClickPrev: handleClickPrev
+        handleClickPrev: handleClickPrev,
+        
     })
 }
 
