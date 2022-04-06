@@ -5,7 +5,7 @@ import Box from "@mui/material/Box";
 import Paginado from "./Paginado";
 
 
-const Populares = ({ titulo, imagen, link }) => {
+const Populares = ({ titulo, imagen, linkCard }) => {
   const { page, handleClickNext, handleClickPrev } = usePaginado()
   const { peliculas, totalPages } = useFetchPeliculas("popular", page);
 
@@ -33,7 +33,7 @@ const Populares = ({ titulo, imagen, link }) => {
             key={pelicula.id}
             titulo={pelicula.title}
             imagen={`https://image.tmdb.org/t/p/w200/${pelicula.poster_path}`}
-            link={`/detalle-pelicula/${pelicula.id}`}
+            linkCard={`/detalle-pelicula/${pelicula.id}`}
           />
         ))}
       </Box>

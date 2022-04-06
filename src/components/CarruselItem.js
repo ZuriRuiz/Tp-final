@@ -38,7 +38,7 @@ const CarruselItem = ({ titulo, imagen, descripcion, linkCarrusel }) => {
         {descripcion}
       </Typography>
       <Link to={linkCarrusel}>
-      <Button sx={{bgcolor: "black", mb: 2 }} variant="contained">Ver mas... </Button>
+      <Button sx={{bgcolor: "black", mb: 2, outlined: "none" }} variant="contained">Ver mas... </Button>
       </Link>
     </Box>
   </Box>

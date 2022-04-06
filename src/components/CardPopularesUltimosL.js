@@ -5,12 +5,15 @@ import Typography from "@mui/material/Typography";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import CardActions from "@mui/material/CardActions";
 import IconButton from "@mui/material/IconButton";
-import Link from "@mui/material/Link";
+import { Link } from "react-router-dom";
+import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
+import Button from "@mui/material/Button"
 
 
-
-const CardPopularesUltimosL = ({ titulo, imagen, link }) => {
+const CardPopularesUltimosL = ({ titulo, imagen, linkCard }) => {
   return (
+    
+    
     <Card
       sx={{
         width: 250,
@@ -28,16 +31,18 @@ const CardPopularesUltimosL = ({ titulo, imagen, link }) => {
       />
 
       <CardContent>
-        <Typography gutterBottom variant="h5">
+        <Typography gutterBottom variant="h6">
           {titulo}
         </Typography>
       </CardContent>
-      <CardActions disableSpacing>
-        
-          <IconButton aria-label="add to favorites">
-            <FavoriteIcon />
+
+
+      <CardActions>
+        <Link to={linkCard}>
+          <IconButton>
+            <RemoveRedEyeIcon />
           </IconButton>
-        
+        </Link>
       </CardActions>
     </Card>
   );
