@@ -79,7 +79,7 @@ const Buscar = () => {
             <CardPopularesUltimosL
               titulo={pelicula.title}
               imagen={`https://image.tmdb.org/t/p/w300/${pelicula.poster_path}`}
-              
+              linkCard={`/detalle-pelicula/${pelicula.id}`}
             />
           );
         })}

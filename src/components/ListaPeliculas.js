@@ -16,16 +16,17 @@ const ListaPeliculas = ({titulo, url}) => {
 
     return(
         <div style= {{height: "450px", overflowY: "scroll" }}>
-            <Box sx={{ bgcolor: "#001529", color: "#ffffff", textAlign: 'center' }}>
-                <Typography>{titulo}</Typography>
+            <Box sx={{ height: 40, bgcolor: "#001529", color: "#ffffff", textAlign: 'center' }}>
+                <Typography sx={{ pt: 1 }}>{titulo}</Typography>
             </Box>
             
             
                 {peliculas.map(pelicula => (
                 <PeliculaItem
+                key={pelicula.id}
                 titulo={pelicula.title}
                 imagen={`https://image.tmdb.org/t/p/w300${pelicula.poster_path}`}
-                link={`/${pelicula.id}`}
+                linkItem={`/detalle-pelicula/${pelicula.id}`}
                 />
 
             ))}

@@ -2,7 +2,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
-const Paginado = ({handleClickPrev, handleClickNext, page, totalPages}) => {
+const Paginado = ({ handleClickPrev, handleClickNext, page, totalPages, handleClickPrimeraPagina, handleClickUltimaPagina }) => {
   return (
     <Box
       sx={{
@@ -12,6 +12,7 @@ const Paginado = ({handleClickPrev, handleClickNext, page, totalPages}) => {
         m: 5
       }}
     >
+     
       <Button
         sx={{ mr: 2 }}
         onClick={handleClickPrev}
@@ -20,10 +21,15 @@ const Paginado = ({handleClickPrev, handleClickNext, page, totalPages}) => {
       >
         Prev
       </Button>
+
       <Typography sx={{ m: 1 }}>pagina {page}</Typography>
+
+      
       <Button sx={{ mr: 2 }} onClick={handleClickNext} variant="contained">
         Next
       </Button>
+
+      
     </Box>
   );
 };

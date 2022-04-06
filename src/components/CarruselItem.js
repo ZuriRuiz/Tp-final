@@ -1,6 +1,7 @@
 import { Box, Button, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 
-const CarruselItem = ({ titulo, imagen, descripcion }) => {
+const CarruselItem = ({ titulo, imagen, descripcion, linkCarrusel }) => {
   return (
     <Box
     sx={{
@@ -36,8 +37,9 @@ const CarruselItem = ({ titulo, imagen, descripcion }) => {
       <Typography sx ={{p: 2, textContent: "center"}}variant="body2">
         {descripcion}
       </Typography>
-      <Button sx={{bgcolor: "black", mb: 2 }} variant="contained">Ver mas... </Button>
-    
+      <Link to={linkCarrusel}>
+      <Button sx={{bgcolor: "black", mb: 2, outlined: "none" }} variant="contained">Ver mas... </Button>
+      </Link>
     </Box>
   </Box>
   );

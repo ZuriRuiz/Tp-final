@@ -6,7 +6,7 @@ import Box from "@mui/material/Box";
 
 
 
-const UltimosL = ({ titulo, imagen, link }) => {
+const UltimosL = ({ titulo, imagen, linkCard }) => {
   
   const { page, handleClickNext, handleClickPrev } = usePaginado()
   const { peliculas, totalPages } = useFetchPeliculas("upcoming", page);
@@ -36,7 +36,7 @@ const UltimosL = ({ titulo, imagen, link }) => {
             key={pelicula.id}
             titulo={pelicula.title}
             imagen={`https://image.tmdb.org/t/p/w200/${pelicula.poster_path}`}
-            link={`/detalle-pelicula/${pelicula.id}`}
+            linkCard={`/detalle-pelicula/${pelicula.id}`}
           />
         ))}
       </Box>
