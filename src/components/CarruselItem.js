@@ -1,5 +1,7 @@
 import { Box, Button, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
+import MenuItem from '@mui/material/MenuItem';
+
 
 const CarruselItem = ({ titulo, imagen, descripcion, linkCarrusel }) => {
   return (
@@ -24,11 +26,12 @@ const CarruselItem = ({ titulo, imagen, descripcion, linkCarrusel }) => {
         alignItems: "center",
         justifyContent: "center",
         width: "800px",
-        bgcolor: "#1a1a1a",
+        bgcolor: "#252123",
         color: "white",
         fontWeight: 'regular',
         borderRadius: 2 ,
-        mt: 8
+        mt: 8,
+        
       }}
     >
       <Typography sx ={{mt: 1}} variant="h5">
@@ -37,9 +40,9 @@ const CarruselItem = ({ titulo, imagen, descripcion, linkCarrusel }) => {
       <Typography sx ={{p: 2, textContent: "center"}}variant="body2">
         {descripcion}
       </Typography>
-      <Link to={linkCarrusel}>
+      <MenuItem componente={Link} to={linkCarrusel}>
       <Button sx={{bgcolor: "black", mb: 2, outlined: "none" }} variant="contained">Ver mas... </Button>
-      </Link>
+      </MenuItem>
     </Box>
   </Box>
   );

@@ -14,7 +14,7 @@ const Paginado = ({ handleClickPrev, handleClickNext, page, totalPages, handleCl
     >
      
       <Button
-        sx={{ mr: 2 }}
+        sx={{ mr: 2, bgcolor: "#3B3C36"}}
         onClick={handleClickPrev}
         variant="contained"
         disabled={page === 1}
@@ -25,7 +25,7 @@ const Paginado = ({ handleClickPrev, handleClickNext, page, totalPages, handleCl
       <Typography sx={{ m: 1 }}>pagina {page}</Typography>
 
       
-      <Button sx={{ mr: 2 }} onClick={handleClickNext} variant="contained">
+      <Button sx={{ mr: 2, bgcolor: "#3B3C36" }} onClick={handleClickNext} variant="contained">
         Next
       </Button>
 

@@ -67,7 +67,7 @@ const Buscar = () => {
         value={valorDelInput}
       />
       <Box sx={{
-        marginTop: 10,
+        mt: 10,
         display: "flex",
         flexWrap: "wrap",
         justifyContent: "center",

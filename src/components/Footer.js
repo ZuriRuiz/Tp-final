@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 const Footer = () => {
     return(
         <Box sx={{ flexGrow: 1}}>
-      <AppBar position="static" sx={{ alignItems: "center", bgcolor: "#001529"}}>
+      <AppBar position="static" sx={{ alignItems: "center", bgcolor: "#000000"}}>
         <Toolbar>
           
         <Typography variant="h9">
