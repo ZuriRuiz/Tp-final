@@ -4,12 +4,14 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import MovieCreationIcon from "@mui/icons-material/MovieCreation";
+import MenuItem from '@mui/material/MenuItem';
 import { Link } from "react-router-dom";
+
 
 const Navbar = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar sx={{ bgcolor: "#001529" }} >
+      <AppBar sx={{ bgcolor: "#000000", color: "white" }} >
         <Toolbar>
           <MovieCreationIcon />
           <Typography
@@ -20,9 +22,11 @@ const Navbar = () => {
               flexDirection: "row",
               pl: 3,
               color: "white",
+              
+              
             }}
           >
-            <Link to="/">Home</Link>
+            <MenuItem component={Link} to="/">Home</MenuItem>
           </Typography>
 
           <Typography
@@ -35,7 +39,7 @@ const Navbar = () => {
               color: "white",
             }}
           >
-            <Link to="/ultimoslanzamientos">Ultimos Lanzamientos</Link>
+            <MenuItem component={Link} to="/ultimoslanzamientos">Ultimos Lanzamientos</MenuItem>
           </Typography>
           <Typography
             variant="h7"
@@ -47,7 +51,7 @@ const Navbar = () => {
               color: "white",
             }}
           >
-            <Link to="/populares">Populares</Link>
+            <MenuItem component={Link} to="/populares">Populares</MenuItem>
           </Typography>
           <Typography
             variant="h7"
@@ -59,7 +63,7 @@ const Navbar = () => {
               color: "white",
             }}
           >
-            <Link to="/buscar">Buscar</Link>
+            <MenuItem component={Link} to="/buscar">Buscar</MenuItem>
           </Typography>
         </Toolbar>
       </AppBar>

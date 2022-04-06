@@ -5,6 +5,8 @@ import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
+import Button from '@mui/material/Button';
+
 
 const DetalleP = () => {
   const params = useParams();
@@ -71,6 +73,10 @@ const DetalleP = () => {
                 sm: 8,
                 md: 2,
               },
+              bgcolor: "black",
+              borderRadius: 2,
+              opacity: 1
+              
             }}
           >
             <Box sx={{ display: "flex", alignItems: "flex-end" }}>
@@ -96,6 +102,60 @@ const DetalleP = () => {
               >
                 <Typography>({peliculaD.release_date && peliculaD.release_date.slice(0, 4)})</Typography>
               </Typography>
+
+            </Box>
+            <Typography
+              variant="subtitle1"
+              color="white"
+              sx={{
+                pt: 3,
+                textAlign: "justify",
+                fontWeigth: 300
+              }}
+            
+            >
+              {peliculaD.overview}
+            </Typography>
+            
+            <Typography
+              variant= "subtitle1"
+              color= "white"
+              sx={{
+                pt: 3,
+                textAlign:"justify",
+                fontWeigth: 300
+              }}
+            >
+              Generos
+
+            </Typography>
+            <Box
+              sx={{
+                display: "flex",
+                flexWrap: "wrap"
+              }}
+            >
+              {peliculaD.genres && peliculaD.genres.map((genre) => (
+              <Button
+                variant="outlined"
+                
+                sx={{
+                  pt: 3,
+                  textAlign: "justify",
+                  fontWeigth: 400,
+                  color: "black",
+                  px: "8px",
+                  py: "4px",
+                  mr: "10px",
+                  mt: "10px",
+                  borderColor: "white"
+                  
+                }}
+              >
+                {genre.name}
+
+              </Button>
+            ))}
 
             </Box>
           </CardContent>
