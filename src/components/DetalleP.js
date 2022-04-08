@@ -73,9 +73,9 @@ const DetalleP = () => {
                 sm: 8,
                 md: 2,
               },
-              bgcolor: "black",
+              bgcolor: "#232323",
               borderRadius: 2,
-              opacity: 1
+              opacity: .8
               
             }}
           >
@@ -97,6 +97,7 @@ const DetalleP = () => {
                   fontWeight: 500,
                   fontSize: "30px",
                   p: 2,
+                  
                   
                 }}
               >
@@ -148,7 +149,9 @@ const DetalleP = () => {
                   py: "4px",
                   mr: "10px",
                   mt: "10px",
-                  borderColor: "white"
+                  borderColor: "white",
+                  bgcolor: "#423E3B",
+                  color: "white"
                   
                 }}
               >
