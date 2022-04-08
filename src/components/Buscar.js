@@ -49,7 +49,6 @@ const Buscar = () => {
     >
       <Button
 
-     
         margin="normal"
         variant="outline"
         endIcon={<SearchIcon></SearchIcon>}
@@ -58,14 +57,16 @@ const Buscar = () => {
         Buscar
       </Button>
 
-      <TextField
+      <TextField 
         onChange={handleChange}
         type="text"
         label="Buscar Peliculas"
         id="filled-size-normal"
         variant="filled"
+        size="small"
         value={valorDelInput}
       />
+      
       <Box sx={{
         mt: 10,
         display: "flex",
