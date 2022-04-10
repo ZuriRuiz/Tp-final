@@ -16,7 +16,7 @@ const useFetchPeliculas = (categoria, page) => {
             
           });
         
-    }, [page])
+    }, [page, categoria])
 
     return {
         peliculas: peliculas,
