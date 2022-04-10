@@ -160,7 +160,7 @@ const DetalleP = () => {
                   mt: "10px",
                   borderColor: "white",
                   bgcolor: "#423E3B",
-                  color: "white"
+                  
                   
                 }}
               >
