@@ -13,7 +13,7 @@ const Home = () => {
       <Box
         sx={{
           display: 'flex',
-          flexWrap: 'nowrap',
+          flexWrap: 'wrap',
           justifyContent: 'space-between',
           mt: 2
         }}

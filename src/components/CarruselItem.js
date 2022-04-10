@@ -17,6 +17,7 @@ const CarruselItem = ({ titulo, imagen, descripcion, linkCarrusel }) => {
       flexDirection: "column",
       alignItems: "center",
       justifyContent: "center",
+     
     }}
   >
     <Box
@@ -34,14 +35,40 @@ const CarruselItem = ({ titulo, imagen, descripcion, linkCarrusel }) => {
         
       }}
     >
-      <Typography sx ={{mt: 1}} variant="h5">
+      <Typography  variant="h5" sx ={{mt: 1,  fontSize: {
+        xs: "14px",
+        sm:"12px",
+        md: "20px",
+      },
+    }} 
+     >
         {titulo}
       </Typography>
-      <Typography sx ={{p: 2, textContent: "center"}}variant="body2">
+      <Typography variant="body2" sx ={{p: 2, textContent: "center", fontSize: {
+        xs: "10px",
+        sm:"12px",
+        md: "14px",
+      }
+      }}>
         {descripcion}
       </Typography>
-      <MenuItem componente={Link} to={linkCarrusel}>
-      <Button sx={{bgcolor: "black", mb: 2, outlined: "none" }} variant="contained">Ver mas... </Button>
+      <MenuItem component={Link} to={linkCarrusel}>
+      <Button variant="contained" sx={{bgcolor: "black", mb: 2, width: {
+        xs:"10px",
+        sm:"15px",
+        md:"20px",
+        
+      },
+      fontSize: {
+        xs: "8px",
+        sm:"10px",
+        md: "12px",
+      },
+      
+      }}
+      >
+        Ver más
+      </Button>
       </MenuItem>
     </Box>
   </Box>
