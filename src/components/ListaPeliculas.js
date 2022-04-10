@@ -11,7 +11,7 @@ const ListaPeliculas = ({ titulo, url }) => {
     )
       .then((res) => res.json())
       .then((data) => setPeliculas(data.results));
-  }, []);
+  }, [url]);
 
   return (
     <Box>
