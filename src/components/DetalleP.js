@@ -61,6 +61,11 @@ const DetalleP = () => {
                 border: 4,
                 borderColor: "white",
                 borderRadius: 1,
+                display: {
+                  xs: "none",
+                  sm: "none",
+                  md: "inline",
+                },
               }}
               image={`https://image.tmdb.org/t/p/original/${peliculaD.poster_path}`}
             ></CardMedia>
@@ -84,8 +89,12 @@ const DetalleP = () => {
                 color="white"
                 sx={{
                   lineHeight: "initial",
-                  fontSize: "30px",
                   m: 2,
+                  fontSize: {
+                    xs: "20px",
+                    sm: "34px",
+                    md: "34px",
+                  },
                 }}
               >
                 {peliculaD.title}
@@ -96,8 +105,7 @@ const DetalleP = () => {
                   color: "white",
                   fontWeight: 500,
                   fontSize: "30px",
-                  p: 2,
-                  
+                  p: 2
                   
                 }}
               >
@@ -111,7 +119,8 @@ const DetalleP = () => {
               sx={{
                 pt: 3,
                 textAlign: "justify",
-                fontWeigth: 300
+                fontWeigth: 300,
+                
               }}
             
             >
